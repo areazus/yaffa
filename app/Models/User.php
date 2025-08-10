@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
@@ -193,5 +194,10 @@ class User extends Authenticatable implements MustVerifyEmail, Onboardable
     public function unhandledReceivedMail(): HasMany
     {
         return $this->hasMany(ReceivedMail::class)->unhandled();
+    }
+
+    public function simpleFinToken(): HasOne
+    {
+        return $this->hasOne(SimpleFinToken::class);
     }
 }

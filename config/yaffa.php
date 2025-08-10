@@ -6,6 +6,7 @@ return [
 
     'admin_email' => env('ADMIN_EMAIL', 'admin@yaffa.test'),
     'alpha_vantage_key' => env('ALPHA_VANTAGE_KEY'),
+    'simplefin_access_url' => env('SIMPLEFIN_ACCESS_URL'),
     'registered_user_limit' => intval(env('REGISTERED_USER_LIMIT')),
     'incoming_receipts_email' => env('INCOMING_RECEIPTS_EMAIL'),
     'email_verification_required' =>env('EMAIL_VERIFICATION_REQUIRED',false),
