@@ -83,6 +83,7 @@ class Account extends Model
         'opening_balance',
         'account_group_id',
         'currency_id',
+        'simplefin_account_id',
     ];
 
     protected $casts = [
